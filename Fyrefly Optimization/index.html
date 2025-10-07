@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefly Optimization Algorithm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔥 Firefly Optimization Algorithm</h1>
+        <p class="subtitle">Algoritmo de optimización inspirado en luciérnagas</p>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">Generación</div>
+                <div class="stat-value" id="generation">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Mejor Valor</div>
+                <div class="stat-value" id="bestValue">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Luciérnagas</div>
+                <div class="stat-value" id="fireflyCount">20</div>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="canvas" width="600" height="600"></canvas>
+        </div>
+
+        <div class="controls">
+            <button class="btn-primary" id="startBtn" onclick="toggleSimulation()">▶ Iniciar</button>
+            <button class="btn-secondary" onclick="resetSimulation()">↻ Reiniciar</button>
+            <button class="btn-secondary" onclick="stepSimulation()">→ Paso a paso</button>
+        </div>
+
+        <div class="info-box">
+            <h3>Cómo funciona el algoritmo:</h3>
+            <ul>
+                <li><strong>Objetivo:</strong> Encontrar el mínimo de f(x,y) = x² + y² (punto verde en el centro)</li>
+                <li><strong>Brillo:</strong> Las luciérnagas más cercanas al óptimo brillan más intensamente</li>
+                <li><strong>Movimiento:</strong> Cada luciérnaga se mueve hacia las más brillantes que ella</li>
+                <li><strong>Aleatoriedad:</strong> Componente aleatorio para explorar nuevas áreas</li>
+                <li><strong>Convergencia:</strong> Eventualmente todas convergen hacia la solución óptima</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
